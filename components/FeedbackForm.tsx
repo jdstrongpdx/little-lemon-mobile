@@ -13,34 +13,47 @@ const FeedbackForm = () => {
     const [firstName, onChangeFirstName] = useState('');
     const [lastName, onChangeLastName] = useState('');
     const [message, onChangeMessage] = useState('');
+    const [phoneNumber, onChangePhoneNumber] = useState('');
 
     return (
         <KeyboardAvoidingView
             style={styles.container}
             behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
-            <ScrollView keyboardDismissMode="on-drag">
+            <ScrollView style={styles.container}>
                 <Text style={styles.headingSection}>
                     How was your visit to Little Lemon?
                 </Text>
                 <Text style={styles.infoSection}>
                     Little Lemon is a charming neighborhood bistro that serves simple food
-                    and classic cocktails in a lively but casual environment. We would
-                    love to hear your experience with us!
+                    and classic cocktails in a lively but casual environment. We would love
+                    to hear your experience with us!
                 </Text>
                 <TextInput
                     style={styles.input}
                     value={firstName}
                     onChangeText={onChangeFirstName}
+                    placeholder={'First Name'}
                 />
                 <TextInput
                     style={styles.input}
                     value={lastName}
                     onChangeText={onChangeLastName}
+                    placeholder={'Last Name'}
+                />
+                <TextInput
+                    style={styles.input}
+                    value={phoneNumber}
+                    onChangeText={onChangePhoneNumber}
+                    placeholder={'Phone Number'}
+                    keyboardType={"phone-pad"}
                 />
                 <TextInput
                     style={styles.messageInput}
                     value={message}
                     onChangeText={onChangeMessage}
+                    placeholder={'Please leave feedback'}
+                    multiline={true}
+                    maxLength={250}
                 />
             </ScrollView>
         </KeyboardAvoidingView>

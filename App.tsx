@@ -7,13 +7,15 @@ import Home from "./components/Home";
 import {Menu} from "react-native-paper";
 import MenuItems from "./components/MenuItems";
 import FeedbackForm from "./components/FeedbackForm";
+import LoginScreen from "./components/LoginScreen";
+import Welcome from "./components/Welcome";
 
 export default function App() {
     return (
         <>
             <View style={styles.container}>
                 <Header />
-                <FeedbackForm />
+                <Welcome/>
                 <Footer />
             </View>
         </>
