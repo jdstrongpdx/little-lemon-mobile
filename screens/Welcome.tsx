@@ -7,7 +7,7 @@ const Welcome = () => {
             <View style={styles.headerWrapper}>
                 <Image
                     style={styles.titleLogo}
-                    source={require('../img/logo.png')}
+                    source={require('../assets/images/logo.png')}
                     resizeMode="cover"
                     accessible={true}
                     accessibilityLabel={'Little Lemon Logo'}
@@ -23,7 +23,7 @@ const Welcome = () => {
 
             <Image
                 style={styles.logo}
-                source={require('../img/littleLemonLogo.png')}
+                source={require('../assets/images/littleLemonLogo.png')}
                 resizeMode="center"
                 accessible={true}
                 accessibilityLabel={'Little Lemon Logo'}
@@ -34,28 +34,28 @@ const Welcome = () => {
             </Text>
             <Image
                 style={styles.image}
-                source={require('../img/Picture1.png')}
+                source={require('../assets/images/Picture1.png')}
                 resizeMode="cover"
                 accessible={true}
                 accessibilityLabel={'Cookbook'}
             />
             <Image
                 style={styles.image}
-                source={require('../img/Picture2.png')}
+                source={require('../assets/images/Picture2.png')}
                 resizeMode="cover"
                 accessible={true}
                 accessibilityLabel={'Bowl of Food'}
             />
             <Image
                 style={styles.image}
-                source={require('../img/Picture3.png')}
+                source={require('../assets/images/Picture3.png')}
                 resizeMode="cover"
                 accessible={true}
                 accessibilityLabel={'Lemon being sliced'}
             />
             <Image
                 style={styles.image}
-                source={require('../img/Picture4.png')}
+                source={require('../assets/images/Picture4.png')}
                 resizeMode="cover"
                 accessible={true}
                 accessibilityLabel={'Cooked mussles in a bowl.'}

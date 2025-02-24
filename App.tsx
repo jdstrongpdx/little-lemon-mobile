@@ -1,30 +1,21 @@
-import * as React from 'react';
-import { View, StyleSheet } from 'react-native';
-
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Home from "./components/Home";
-import {Menu} from "react-native-paper";
-import MenuItems from "./components/MenuItems";
-import FeedbackForm from "./components/FeedbackForm";
-import LoginScreen from "./components/LoginScreen";
-import Welcome from "./components/Welcome";
+import { NavigationContainer } from "@react-navigation/native";
+import RootNavigator from "./navigators/RootNavigator";
+import { View, StyleSheet } from "react-native";
 
 export default function App() {
     return (
-        <>
+        <NavigationContainer>
             <View style={styles.container}>
-                <Header />
-                <Welcome/>
-                <Footer />
+                <RootNavigator />
             </View>
-        </>
+        </NavigationContainer>
     );
 }
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#495E57',
+        backgroundColor: '#333333',
     },
 });
+
