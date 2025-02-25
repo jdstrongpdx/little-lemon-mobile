@@ -2,11 +2,6 @@ import React, {useState} from 'react';
 import {Image, StyleSheet, Text, View, Button, Pressable} from "react-native";
 
 const WelcomeScreen = ({navigation}) => {
-  const handlePress = () => {
-    navigation.navigate('Subscribe')
-  };
-
-
   return (
       <>
       <View style={styles.container}>
@@ -23,10 +18,31 @@ const WelcomeScreen = ({navigation}) => {
         </Text>
 
         <Pressable
-            onPress={() => handlePress()}
+            onPress={() => navigation.navigate('Subscribe')}
             style={styles.buttonWrapper}
         >
           <Text style={styles.buttonText}>Newsletter</Text>
+        </Pressable>
+
+        <Pressable
+            onPress={() => navigation.navigate('Menu')}
+            style={styles.buttonWrapper}
+        >
+          <Text style={styles.buttonText}>Menu</Text>
+        </Pressable>
+
+        <Pressable
+            onPress={() => navigation.navigate('Customers')}
+            style={styles.buttonWrapper}
+        >
+          <Text style={styles.buttonText}>Customers</Text>
+        </Pressable>
+
+        <Pressable
+            onPress={() => navigation.navigate('Settings')}
+            style={styles.buttonWrapper}
+        >
+          <Text style={styles.buttonText}>Settings</Text>
         </Pressable>
 
       </View>
@@ -59,7 +75,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   buttonWrapper: {
-    marginTop: 250,
+    marginTop: 20,
     height: 35,
     width: 300,
     borderRadius: 8,
